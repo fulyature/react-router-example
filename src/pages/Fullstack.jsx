@@ -17,6 +17,7 @@ const Fullstack = () => {
         <button className="btn btn-outline-success mt-4">Learn More</button>
       </div>
       <div className="mt-4">
+        {/* fullstack acıldıgında reactta sergilencek lınk ını bos bıraktım ve appRouterda index ledim .yani fullstack e gittiginde default olarak react ta sergılenıyor*/}
         <Link to="" className="btn btn-success w-50">
           React
         </Link>

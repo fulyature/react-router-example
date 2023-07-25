@@ -1,7 +1,7 @@
 const React = () => {
   return (
     <div>
-      <h1>React</h1>
+      <h1>Reactt</h1>
     </div>
   );
 };
