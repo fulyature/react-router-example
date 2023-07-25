@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const Path = (props: Props) => {
+const Path = () => {
   return <div>Path</div>;
 };
 
