@@ -1,9 +1,24 @@
-import React from "react";
-import { useLocation, useNavigate } from "react-router-dom";
+import React, { useState } from "react";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { useEffect } from "react";
+import axios from "axios";
 
 const PersonDetail = () => {
-  let { state: person } = useLocation();
-  let navigate = useNavigate();
+  // let { state: person } = useLocation();
+  // let navigate = useNavigate();
+  // let {param}
+  let { id } = useParams();
+  console.log({ id });
+  const [person, setPerson] = useState({});
+  const getPerson = () => {
+    axios(`https://reqres.in/api/users/${id} `)
+      .then((res) => setPerson(res.data.data))
+      .catch((err) => console.log(err));
+  };
+  useEffect(() => {
+    getPerson();
+  }, []);
+
   return (
     <div className="container text-center">
       <h3>
